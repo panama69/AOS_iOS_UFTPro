@@ -175,9 +175,6 @@ public class LeanFtTest extends UnitTestClassBase {
         } catch (ReplayObjectNotFoundException ronfex) {
             logMessages("error code: " + ronfex.getErrorCode() + " - " + ronfex.getMessage(), LOG_LEVEL.ERROR);
             Assert.fail();
-        } catch (GeneralLeanFtException glftex) {
-            logMessages("error code: " + glftex.getErrorCode() + " - " + glftex.getMessage(), LOG_LEVEL.ERROR);
-            Assert.fail();
         }
     }
 
