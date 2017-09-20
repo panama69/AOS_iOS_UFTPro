@@ -205,7 +205,7 @@ public class LeanFtTest extends UnitTestClassBase {
 
             description.setOsType("IOS");
             description.setOsVersion(">=9.3.4");
-            description.setName("shiffs iPad");
+            //description.setName("shiffs iPad");
             retDevice = MobileLab.lockDevice(description, appDescription, DeviceSource.MOBILE_CENTER);
 
         } catch (GeneralLeanFtException err) {
