@@ -1,4 +1,7 @@
-A simple UFTPro (LeanFT) script.
+A simple UFTPro (LeanFT) / MC script.
+
+LeanFT 14.01
+MC 2.51
 
 It uses Advantage Online Shopping iOS app to purchase an item.
 
