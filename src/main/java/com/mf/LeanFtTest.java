@@ -206,8 +206,8 @@ public class LeanFtTest extends UnitTestClassBase {
             description.setOsType("IOS");
             description.setOsVersion(">=9.3.4");
             //description.setName("shiffs iPad");
-            retDevice = MobileLab.lockDeviceById("8a05bbf719c5a6840177ad62b88674ee53893590");
-            //retDevice = MobileLab.lockDevice(description, appDescription, DeviceSource.MOBILE_CENTER);
+            //retDevice = MobileLab.lockDeviceById("8a05bbf719c5a6840177ad62b88674ee53893590");
+            retDevice = MobileLab.lockDevice(description, appDescription, DeviceSource.MOBILE_CENTER);
 
         } catch (GeneralLeanFtException err) {
             logMessages("failed allocating device: " + err.getMessage(), LOG_LEVEL.ERROR);
