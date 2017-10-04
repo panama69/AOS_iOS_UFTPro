@@ -136,6 +136,7 @@ public class LeanFtTest extends UnitTestClassBase {
             if (HIGHLIGHT)
                 appModel.AdvantageShoppingApplication().ADDTOCARTButton().highlight();
             appModel.AdvantageShoppingApplication().ADDTOCARTButton().tap();
+            windowSync(1500);
 
             logMessages("Tap the back button", LOG_LEVEL.INFO);
             if (HIGHLIGHT)
