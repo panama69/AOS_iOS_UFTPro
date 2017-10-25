@@ -1,8 +1,5 @@
 package com.mf;
 
-import com.hp.lft.report.ReportException;
-import com.hp.lft.report.Reporter;
-import com.hp.lft.report.Status;
 import org.junit.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -11,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.hp.lft.sdk.*;
 import com.hp.lft.sdk.mobile.*;
-import com.hp.lft.verifications.*;
 
 import unittesting.*;
 
@@ -20,8 +16,8 @@ public class LeanFtTest extends UnitTestClassBase {
 
     private static boolean noProblem;
     private static Device device;
-    private static AppModelAOS appModel;
-    MCUtils utils = new MCUtils();
+    private static AppModelAOS_iOS appModel;
+    private MCUtils utils = new MCUtils();
 
     @BeforeClass
     public void beforeClass() throws Exception {
@@ -47,12 +43,13 @@ public class LeanFtTest extends UnitTestClassBase {
             DeviceDescription deviceDescription = new DeviceDescription();
 
             deviceDescription.setOsType("IOS");
-            deviceDescription.setOsVersion(">=9.3.4");
+            //deviceDescription.setOsVersion(">=9.0.0");
 
-            utils.setDevice(deviceDescription);
+            //utils.lockDevice(deviceDescription, DeviceSource.MOBILE_CENTER);
+            utils.lockDeviceById("8a05bbf719c5a6840177ad62b88674ee53893590");
 
             if (utils.device != null) {
-                appModel = new AppModelAOS(utils.device);
+                appModel = new AppModelAOS_iOS(utils.device);
                 utils.setApp();
 
                 utils.logMessages ("Allocated device: \"" + utils.device.getName() + "\" (" + utils.device.getId() + "), Model :"
