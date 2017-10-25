@@ -14,8 +14,8 @@ import unittesting.*;
 public class LeanFtTest extends UnitTestClassBase {
 
 
-    private static boolean noProblem;
-    private static Device device;
+    private boolean noProblem;
+    private Device device;
     private static AppModelAOS_iOS appModel;
     private MCUtils utils = new MCUtils();
 
@@ -43,10 +43,10 @@ public class LeanFtTest extends UnitTestClassBase {
             DeviceDescription deviceDescription = new DeviceDescription();
 
             deviceDescription.setOsType("IOS");
-            //deviceDescription.setOsVersion(">=9.0.0");
+            deviceDescription.setOsVersion(">=9.0.0");
 
-            //utils.lockDevice(deviceDescription, DeviceSource.MOBILE_CENTER);
-            utils.lockDeviceById("8a05bbf719c5a6840177ad62b88674ee53893590");
+            utils.lockDevice(deviceDescription);
+            //utils.lockDeviceById("8a05bbf719c5a6840177ad62b88674ee53893590");
 
             if (utils.device != null) {
                 appModel = new AppModelAOS_iOS(utils.device);
@@ -108,7 +108,7 @@ public class LeanFtTest extends UnitTestClassBase {
             utils.logMessages ("Type name", LOG_LEVEL.INFO);
             if (utils.HIGHLIGHT)
                 appModel.AdvantageShoppingApplication().USERNAMEEditField().highlight();
-            appModel.AdvantageShoppingApplication().USERNAMEEditField().setText("sshiff2");
+            appModel.AdvantageShoppingApplication().USERNAMEEditField().setText("sshiff");
 
             utils.logMessages ("Type password", LOG_LEVEL.INFO);
             if (utils.HIGHLIGHT)
