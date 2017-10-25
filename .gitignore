@@ -254,3 +254,6 @@ workspace.xml
 /dependencies
 /META-INF
 *.iml
+
+src/main/resources/META-INF/MANIFEST.MF
+AOS-iOS-UFTPro.iml
