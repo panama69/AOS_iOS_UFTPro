@@ -242,7 +242,6 @@ out/
 target/
 workspace.xml
 **/.idea/libraries/
-**/KP-find-facility-Maven/.idea/
 /.idea
 /bin
 /releases
