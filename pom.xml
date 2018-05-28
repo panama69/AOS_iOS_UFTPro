@@ -17,31 +17,30 @@
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>sdk</artifactId>
-            <version>14.1.0</version>
+            <version>14.3.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>report</artifactId>
-            <version>14.1.0</version>
+            <version>14.3.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>unittesting</artifactId>
-            <version>14.1.0</version>
+            <version>14.3.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>verifications</artifactId>
-            <version>14.1.0</version>
+            <version>14.3.0</version>
         </dependency>
-
         <dependency>
             <groupId>com.mf</groupId>
-            <artifactId>MCUtilities</artifactId>
-            <version>4.0.0</version>
+            <artifactId>utils</artifactId>
+            <version>1.1</version>
         </dependency>
     </dependencies>
 
@@ -56,6 +55,24 @@
     <build>
         <testSourceDirectory>src/main/java</testSourceDirectory>
         <plugins>
+			<!--Uncomment this section if you want to use the application model generator plugin-->
+            <!--For details, see https://admhelp.microfocus.com/leanft/en/latest/HelpCenter/Content/HowTo/update-appModel.htm#hp-minitoc-item-3-->
+            <!--<plugin>-->
+                <!--<groupId>com.hpe.lft</groupId>-->
+                <!--<artifactId>appmodel-generator-mojo</artifactId>-->
+                <!--<version>14.3.0</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>validate</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+					<!--<configuration>-->
+                    <!--</configuration>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+			
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

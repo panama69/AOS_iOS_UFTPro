@@ -40,8 +40,8 @@ public class UnitTestClassBase extends TestNgUnitTestBase {
 
     @AfterMethod(alwaysRun=true)
     public void baseAfterMethod(ITestResult result) throws Exception {
+        setStatus(result.getStatus() == ITestResult.FAILURE ? Status.Failed : Status.Passed, result.getThrowable());
         testTearDown();
-        setStatus(result.getStatus() == ITestResult.FAILURE ? Status.Failed : Status.Passed);
     }
 
     @AfterClass(alwaysRun=true)

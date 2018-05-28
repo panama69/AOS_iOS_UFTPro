@@ -242,7 +242,7 @@ out/
 target/
 workspace.xml
 **/.idea/libraries/
-/.idea
+.idea/
 /bin
 /releases
 /maven
@@ -256,4 +256,4 @@ workspace.xml
 *.iml
 
 src/main/resources/META-INF/MANIFEST.MF
-AOS-iOS-UFTPro.iml
+*.iml
